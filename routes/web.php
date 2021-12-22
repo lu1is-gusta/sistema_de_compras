@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdutosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/', '/produtos'); //A rota '/produtos' será a principal'
 
-Route::get('/', function () {
-    return view('index');
+Route::prefix('produtos')->group(function () {
+    
+    Route::get('/', [ProdutosController::class, 'index']);
+
+    Route::get('/create', [ProdutosController::class, 'create']);
 });
+

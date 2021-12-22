@@ -9,6 +9,6 @@
     </head>
 
     <body>
-        <h1>@yield('titulo')</h1>
+        @yield('conteudo')
     </body>
 </html>

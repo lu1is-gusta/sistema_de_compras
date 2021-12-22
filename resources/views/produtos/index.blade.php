@@ -2,4 +2,8 @@
 
 @section('titulo da aba', 'Produtos')
 
-@section('titulo', 'Lista de Produtos')
+@section('conteudo')
+
+    <h1>Lista de Produtos</h1>
+
+@endsection
