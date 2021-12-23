@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use Illuminate\Support\Facades\DB;
 
 class ProdutosController extends Controller
 {
     public function index(){
-        return view('produtos.index');
+        $produto = DB::select('SELECT * FROM produtos'); //Usei a classe 'DB' para pegar os dados no banco de dados e mostar na página 'index'
+        return view('produtos.index', ['produto' => $produto]);
     }
 
     public function create(){
@@ -24,5 +26,10 @@ class ProdutosController extends Controller
         ]);
 
         return redirect()->route('produtos.index');
+    }
+
+    public function show(){
+        
+        return view('produtos.show',);
     }
 }

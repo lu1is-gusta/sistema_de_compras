@@ -21,5 +21,7 @@ Route::prefix('produtos')->group(function () {
 
     Route::get('/create', [ProdutosController::class, 'create']);
     Route::post('/create', [ProdutosController::class, 'store'])->name('adicionar_produto');
+
+    //Route::get('/read', [ProdutosController::class], 'show');
 });
 
