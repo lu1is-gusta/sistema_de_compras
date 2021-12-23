@@ -17,7 +17,7 @@ Route::redirect('/', '/produtos'); //A rota '/produtos' será a principal'
 
 Route::prefix('produtos')->group(function () {
     
-    Route::get('/', [ProdutosController::class, 'index']);
+    Route::get('/', [ProdutosController::class, 'index'])->name('produtos.index');
 
     Route::get('/create', [ProdutosController::class, 'create']);
     Route::post('/create', [ProdutosController::class, 'store'])->name('adicionar_produto');
