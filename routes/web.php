@@ -20,5 +20,6 @@ Route::prefix('produtos')->group(function () {
     Route::get('/', [ProdutosController::class, 'index']);
 
     Route::get('/create', [ProdutosController::class, 'create']);
+    Route::post('/create', [ProdutosController::class, 'store'])->name('adicionar_produto');
 });
 
