@@ -2,9 +2,16 @@
 
 @section('titulo da aba', 'Produtos')
 
+@section('titulo do conteudo', 'Lista de Produtos')
+
 @section('conteudo')
 
-    <h1>Lista de Produtos</h1>
+    <div class="mt-3 mb-3">
+        <a href="{{ url('produtos/create') }}">
+            <button class="btn btn-success">Adicionar produto</button>
+        </a>
+
+    </div>
 
     <table class="table table-striped">
         <thead>
@@ -14,6 +21,7 @@
                 <th scope="col">Descrição</th>
                 <th scope="col">Preço</th>
                 <th scope="col">Quantidade</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>            
@@ -24,6 +32,17 @@
                     <td>{{$item->descricao}}</td>
                     <td>{{$item->valor}}</td>
                     <td>{{$item->quantidade}}</td> 
+
+                    <td>
+                        <a href="">
+                            <button class="btn btn-info">Editar</button>
+                        </a>
+
+                        <a href="">
+                            <button class="btn btn-danger">Deletar</button>
+                        </a>
+                    </td>
+
                 </tr>
             @endforeach            
         </tbody>
