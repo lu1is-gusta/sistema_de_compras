@@ -2,9 +2,9 @@
 
 @section('titulo da aba', 'Adicionar produto')
 
-@section('conteudo')
+@section('titulo do conteudo', 'Adicionar Produto')
 
-    <h1>Adicionar Produto</h1>
+@section('conteudo')
 
     <form method='POST' action="{{ route('adicionar_produto') }}" >
         @csrf
