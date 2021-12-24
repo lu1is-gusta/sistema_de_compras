@@ -1,6 +1,6 @@
 @extends('templates.template')
 
-@section('titulo da aba', 'Adicionar produto')
+@section('titulo da aba', 'Adicionar Produto')
 
 @section('titulo do conteudo', 'Adicionar Produto')
 

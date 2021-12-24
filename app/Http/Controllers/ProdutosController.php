@@ -47,4 +47,17 @@ class ProdutosController extends Controller
         
         return redirect()->route('produtos.index');
     }
+
+    public function delete($id){
+        $produto = Produto::findOrFail($id);
+
+        return view('produtos.delete', ['produto' => $produto]);
+    }
+
+    public function permanentlyDelete($id){
+        $produto = Produto::findOrFail($id);
+        $produto->delete();
+
+        return redirect()->route('produtos.index');
+    }
 }

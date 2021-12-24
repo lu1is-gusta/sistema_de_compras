@@ -7,7 +7,7 @@
 @section('conteudo')
 
     <div class="mt-3 mb-3">
-        <a href="{{ url('produtos/create') }}">
+        <a href="{{ url('produtos/criar') }}">
             <button class="btn btn-success">Adicionar produto</button>
         </a>
 
@@ -38,7 +38,7 @@
                             <button class="btn btn-info">Editar</button>
                         </a>
 
-                        <a href="">
+                        <a href="{{ route('produtos.deletar', ['id' => $item->id]) }}">
                             <button class="btn btn-danger">Deletar</button>
                         </a>
                     </td>
