@@ -22,6 +22,7 @@ Route::prefix('produtos')->group(function () {
     Route::get('/create', [ProdutosController::class, 'create']);
     Route::post('/create', [ProdutosController::class, 'store'])->name('adicionar_produto');
 
-    //Route::get('/read', [ProdutosController::class], 'show');
+    Route::get('/editar/{id}', [ProdutosController::class, 'edit'])->name('produtos.edit');
+    Route::post('/editar/{id}', [ProdutosController::class, 'update'])->name('alterar_produto');
 });
 

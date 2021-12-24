@@ -34,7 +34,7 @@
                     <td>{{$item->quantidade}}</td> 
 
                     <td>
-                        <a href="">
+                        <a href="{{ route('produtos.edit', ['id' => $item->id]) }}"> <!--muda para a rota 'produtos/edit' e passa o parâmetro 'id' para ela-->
                             <button class="btn btn-info">Editar</button>
                         </a>
 
